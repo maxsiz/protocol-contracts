@@ -9,7 +9,6 @@
     "test": "truffle test"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.1.0",
     "@openzeppelin/contracts-upgradeable": "3.4.0"
   },
   "devDependencies": {
