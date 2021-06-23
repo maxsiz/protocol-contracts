@@ -34,13 +34,9 @@ module.exports = async function (deployer, network) {
     const transferProxy = await TransferProxy.deployed();
     await transferProxy.__TransferProxy_init({ gas: 200000 });
 
-    console.log('transferProxy', transferProxy.address);
-
     await deployer.deploy(ERC20TransferProxy, { gas: 1500000 });
     const erc20TransferProxy = await ERC20TransferProxy.deployed();
     await erc20TransferProxy.__ERC20TransferProxy_init({ gas: 200000 });
-
-    console.log('erc20TransferProxy', erc20TransferProxy.address);
 
     const royaltiesRegistry = await RoyaltiesRegistry.deployed();
 
